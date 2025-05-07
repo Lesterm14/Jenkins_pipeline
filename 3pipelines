@@ -1,0 +1,19 @@
+git checkout -b pipeline-a   # For build task
+# Add your Jenkinsfile and scripts for Pipeline A
+git add .
+git commit -m "Add build pipeline"
+git push -u origin pipeline-a
+
+git checkout main
+git checkout -b pipeline-b   # For test task
+# Add Jenkinsfile for testing
+git add .
+git commit -m "Add test pipeline"
+git push -u origin pipeline-b
+
+git checkout main
+git checkout -b pipeline-c   # For deploy task
+# Add Jenkinsfile for deployment
+git add .
+git commit -m "Add deploy pipeline"
+git push -u origin pipeline-c
